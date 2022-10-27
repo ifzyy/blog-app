@@ -20,7 +20,7 @@ RSpec.describe 'Users', type: :request do
 
   describe 'Show single user details' do
     before(:each) do
-      user = User.create(name: 'Johnson', photo: 'https://unsplash.com/photos/fF_-0BxGuVvo',
+      user = User.create(name: 'Johnson emmanuel', photo: 'https://unsplash.com/photos/fF_-0BxGuVvo',
                          bio: 'Teacher from nigeria.', posts_counter: 0)
       get "/users/#{user.id}"
     end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  subject { User.create(name: 'Johnson', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from nigeria.', posts_counter: 0) }
+  subject { User.create(name: 'Johnson Emmanuel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from nigeria.', posts_counter: 0) }
 
   describe 'GET /index' do
     before(:each) do
@@ -22,7 +22,7 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'Show single user details' do
     before(:each) do
-      user = User.create(name: 'Johnson', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+      user = User.create(name: 'Johnson emmanuel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                          bio: 'Teacher from nigeria.', posts_counter: 0)
 
       new_post = Post.create(author: user, title: 'Hello', text: 'This is my first post', likes_counter: 0,
