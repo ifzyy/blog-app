@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+gem 'ffi' if ENV['CHILDPROCESS_POSIX_SPAWN'] == 'true' || Gem.win_platform?
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
@@ -42,7 +44,6 @@ gem 'tzinfo-data'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-gem 'ffi', github: 'ffi/ffi', submodules: true
 # Use Sass to process CSS
 # gem "sassc-rails"
 
