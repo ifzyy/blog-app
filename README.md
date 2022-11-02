@@ -1,17 +1,29 @@
 # Blog app
 
+> Blog App is an application where user can create posts and leave comments and likes other users posts.
+
 ## Built With
 
 - Ruby
-- Ruby on Rails
+- Ruby on Rail
+- Rspec
+- Rubocop
 
 ## Getting Started
 
-**To get a local copy up clone the repo or download the full souce code**
+To get a local copy up and running follow these simple example steps.
 
-- Clone the repository by running git clone https://github.com/ifzyy/blog-app.git
-- Navigate to the folder cd blog-app
+### 🛠️ Installation & Set Up
 
+If you dont have Ruby installed on your computer, you can download it from [here](https://www.ruby-lang.org/en/downloads/).
+
+If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
+
+Run `bundle install`
+
+### Test
+
+Run `rspec spec`
 ## Author
 
 👤 **Johnson**
