@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  subject { User.create(name: 'Johnson Emmanuel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from nigeria.', posts_counter: 0) }
+  subject { User.create(name: 'Ali Khan', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Researcher from UK.', posts_counter: 0) }
 
   describe 'GET /index' do
     before(:each) do
@@ -22,8 +22,8 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'Show single user details' do
     before(:each) do
-      user = User.create(name: 'Johnson emmanuel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                         bio: 'Teacher from nigeria.', posts_counter: 0)
+      user = User.create(name: 'Ali Khan', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                         bio: 'Researcher from UK.', posts_counter: 0)
 
       new_post = Post.create(author: user, title: 'Hello', text: 'This is my first post', likes_counter: 0,
                              comments_counter: 0)
@@ -37,7 +37,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template(:show)
     end
     it 'Response should include right placeholder text.' do
-      expect(response.body).to include('Post details will be shown here')
+      expect(response.body).to include('Post Details')
     end
   end
 end
