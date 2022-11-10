@@ -20,8 +20,8 @@ RSpec.describe 'Users', type: :request do
 
   describe 'Show single user details' do
     before(:each) do
-      user = User.create(name: 'Johnson emmanuel', photo: 'https://unsplash.com/photos/fF_-0BxGuVvo',
-                         bio: 'Teacher from nigeria.', posts_counter: 0)
+      user = User.create(name: 'Ali Khan', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                         bio: 'Researcher from UK.', posts_counter: 0)
       get "/users/#{user.id}"
     end
     it 'Response will be successful.' do
@@ -31,7 +31,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template(:show)
     end
     it 'Response should include right placeholder text.' do
-      expect(response.body).to include('User details will be shown here')
+      expect(response.body).to include('User Details by id')
     end
   end
 end
