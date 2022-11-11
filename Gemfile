@@ -83,3 +83,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'bootstrap', '~> 5.0'
+
+gem 'bootstrap_form', '~> 5.1'
+gem 'devise'
